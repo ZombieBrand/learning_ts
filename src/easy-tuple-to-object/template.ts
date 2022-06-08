@@ -2,7 +2,7 @@
  * [P in keyof T] : P  得到的是数组下标
  * [P in T[number]]:P  得到的是数组值的集合
  */
-type TupleToObject<T extends readonly any[]> = {
+type TupleToObject<T extends readonly (string | number | symbol)[]> = {
     [P in T[number]]:P
 }
 
